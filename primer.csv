@@ -7,4 +7,3 @@ date,client,cost,paid,balance,status_calc
 01/01/2016,F,75000,0,75000,pending
 28/02/2016,G,89000,0,89000,pending
 28/06/2016,H,53000,50000,53000,open
-15/07/2016,I,20000,20000,0,closed

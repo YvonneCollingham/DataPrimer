@@ -22,16 +22,17 @@ for line in f:
 		line=line.strip('\n').strip('\r')
 		entry=line.split(',')
 
+		print " "
 		print entry
 		#print "INSERT INTO transactions(date,name,cost,paid,balance,status) VALUES('"+entry[1]+","+entry[2]+","+entry[3]+","+entry[4]+","+entry[5]+"')"
-		
 		#print "INSERT INTO transactions(date,name,cost,paid,balance,status) VALUES('"+entry[0]+"','"+entry[1]+"','"+entry[2]+"','"+entry[3]+"','"+entry[4]+"','"+entry[5]+"')"
 		
-		query = "INSERT INTO transactions(date,name,cost,paid,balance,status) VALUES('"+entry[0]+"','"+entry[1]+"','"+entry[2]+"','"+entry[3]+"','"+entry[4]+"','"+entry[5]+"')"
+		query = "INSERT INTO transactions(date,name,cost,paid,balance,status) VALUES('"+entry[0]+"','"+entry[1]+"','"+entry[2]+"','"+entry[3]+"','"+entry[4]+"','"+entry[5]+"');"
 		print " "
 		print query
 		print "--------------------------------------"
 		cur.execute(query)
+		db.commit()
 		#try:
 		#	cur.execute(query)
 		#except:
